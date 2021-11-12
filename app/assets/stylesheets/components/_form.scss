@@ -1,0 +1,14 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+
+    .form-style {
+      color:black;
+      border-radius: 2px;
+      border: 1px solid black;
+      padding: 32px;
+      width: 50%;
+      margin-bottom: 16px;
+    }
+}

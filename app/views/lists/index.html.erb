@@ -1,0 +1,30 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/7991576/pexels-photo-7991576.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  <div class="container">
+    <h1>Movie Lists</h1>
+    <p>Make your own list!</p>
+    <%= link_to "Make List", lists_path(anchor: "bottom"), class: "btn btn-primary" %>
+  </div>
+</div>
+<%# <div class="banner"> %>
+  <%# <video control autoplay loop muted src="/videos/pexels-tima-miroshnichenko-7984186.mp4" type="video/mp4"></video> %>
+    <%# <div class="text_box">
+      <h1>CODING BD</h1>
+    </div> %>
+<%# </div> %>
+
+<div class="container">
+    <div class="cards">
+  <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= list.name %>
+        <%= link_to "", list_path(list), class: "card-category-link"  %>
+      </div>
+  <% end %>
+  </div>
+  <div class="form-container">
+    <div id="bottom" class="form-style">
+      <h2>Create Your List</h2>
+      <%= render 'form', list: @list  %>
+    </div>
+  </div>
+</div>
