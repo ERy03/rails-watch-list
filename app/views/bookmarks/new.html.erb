@@ -1,11 +1,13 @@
+  <div class='new-container'>
 <div class="container">
-  <div class="form-container">
-    <div class="form-style">
-    <%= simple_form_for [@list, @bookmark] do |f| %>
-      <%= f.association :movie %>
-      <%= f.input :comment %>
-      <%= f.submit 'Create' %>
-    <% end %>
+    <div class="form-container">
+      <div class="form-style">
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.association :movie %>
+        <%= f.input :comment %>
+        <%= f.submit 'Create' %>
+      <% end %>
+      </div>
     </div>
   </div>
 </div>

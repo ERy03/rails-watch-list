@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <nav class="navbar sticky-top navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-light bg-light">
       <div class="container-fluid">
       <%= link_to lists_path, class: "navbar-brand" do %>
         <i class="fas fa-user-ninja"></i> <span id="title">Movie Ninja</span>
@@ -19,17 +19,17 @@
       </div>
     </nav>
     <%= yield %>
-      <div class="footer">
-        <div class="footer-links">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <div class="footer-copyright">
-          This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-        </div>
-      </div>
   </body>
+  <div class="footer position-bottom">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    </div>
+  </div>
 </html>
