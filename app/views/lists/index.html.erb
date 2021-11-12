@@ -13,13 +13,13 @@
 <%# </div> %>
 
 <div class="container">
-    <div class="cards">
-  <% @lists.each do |list| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-        <%= list.name %>
-        <%= link_to "", list_path(list), class: "card-category-link"  %>
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path('mojtaba-hosseinzade-fB824nd3WWU-unsplash.jpg') %>)">
+      <%= list.name %>
+      <%= link_to "", list_path(list), class: "card-category-link"  %>
       </div>
-  <% end %>
+    <% end %>
   </div>
   <div class="form-container">
     <div id="bottom" class="form-style">
